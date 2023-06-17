@@ -1,0 +1,18 @@
+---
+title: "Week3 Assignment: R Markdown Presentation & Plotly "
+author: "drwstc"
+date: "2023-06-15"
+output: slidy_presentation
+---
+
+## 3D Scatterplot
+
+```{r, echo=FALSE,message=FALSE, warning=FALSE}
+library(plotly)
+set.seed(2023-06-15)
+temp <- rnorm(100, mean = 30, sd = 5)
+pressue <- rnorm(100)
+dtime <- 1:100
+plot_ly(x = ~temp, y = ~pressue, z = ~dtime,
+        type = "scatter3d", color = ~temp)
+```
